@@ -7,7 +7,7 @@
 <body>
 
    
-    <?php foreach (filterByAuthor($books, 'author', 'Ibrahim Lfaqi') as $book): ?>
+    <?php foreach ($filterBooks as $book): ?>
         <ul>
             <li><strong>Title:</strong> <?php echo $book['title']; ?></li>
             <li><strong>Author:</strong> <?php echo $book['author']; ?></li>

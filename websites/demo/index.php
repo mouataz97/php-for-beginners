@@ -20,5 +20,5 @@
         $filterBooks = array_filter($books, function ($book) {
             return $book['author'] === 'Ibrahim Lfaqi';
         });
-    ?>
     
+require_once 'index.view.php';
