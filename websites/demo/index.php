@@ -17,15 +17,8 @@
         ]
     ];
 
-        
-        function filterByAuthor(array $items, string $key, string $value) {
-            $filterBooks = [];
-            foreach ($items as $item) {
-                if ($item[$key] === $value) {
-                    $filterBooks[] = $item;
-                }
-            }
-            return $filterBooks;
-        }
+        $filterBooks = array_filter($books, function ($book) {
+            return $book['author'] === 'Ibrahim Lfaqi';
+        });
     ?>
     
