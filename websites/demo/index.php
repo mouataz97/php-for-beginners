@@ -2,7 +2,7 @@
 
 require_once 'functions.php';
 
-$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
 if($uri == '/') {
     require_once 'controllers/index.php';
@@ -13,3 +13,10 @@ if($uri == '/') {
 }else{
     require_once 'controllers/404.php';
 }
+
+[
+    '/' => 'controllers/index.php',
+    '/about' => 'controllers/about.php',
+    '/contact' => 'controllers/contact.php',
+    '/404' => 'controllers/404.php',
+]
