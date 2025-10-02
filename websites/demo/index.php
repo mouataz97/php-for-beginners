@@ -2,7 +2,7 @@
 
 require_once 'functions.php';
 
-$uri = $_SERVER['REQUEST_URI'];
+$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 if($uri == '/') {
     require_once 'controllers/index.php';
